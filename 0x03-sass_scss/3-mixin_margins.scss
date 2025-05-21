@@ -1,0 +1,19 @@
+@mixin theme($marginBody: 10px, $marginDiv: 15px) {
+  body {
+    margin-left: $marginBody;
+    margin-right: $marginBody;
+  }
+
+  div {
+    margin-left: $marginDiv;
+    margin-right: $marginDiv;
+  }
+}
+
+.page {
+  @include theme(); // uses default values
+}
+
+.container {
+  @include theme(20px, 30px); // overrides defaults
+}
